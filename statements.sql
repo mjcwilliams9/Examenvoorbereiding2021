@@ -72,15 +72,15 @@ CREATE TABLE medewerker(
 
  
 
-CREATE TABLE bestelling(
-    artikelcode INT NOT NULL,
-    winkelcode INT,
-    aantal INT,
-    klantcode INT,
-    medewerkerscode INT,
-    afgehaald DATETIME,
-    FOREIGN KEY artikelcode REFERENCES artikel(artikelcode),
-    FOREIGN KEY winkelcode REFERENCES winkel(winkelcode),
-    FOREIGN KEY klantcode REFERENCES klant(klantcode),
-    FOREIGN KEY medewerkerscode REFERENCES medewerker(medewerkerscode)
+CREATE TABLE Bestelling(
+    Artikelcode INT NOT NULL,
+    Winkelcode INT,
+    Aantal INT,
+    Klantcode INT,
+    Medewerkerscode INT,
+    Afgehaald DATETIME,
+    FOREIGN KEY(Artikelcode) REFERENCES Artikel(Artikelcode),
+    FOREIGN KEY(Winkelcode) REFERENCES Winkel(Winkelcode),
+    FOREIGN KEY(Klantcode) REFERENCES Klant(Klantcode),
+    FOREIGN KEY(Medewerkerscode) REFERENCES Medewerker(Medewerkerscode)
 );
