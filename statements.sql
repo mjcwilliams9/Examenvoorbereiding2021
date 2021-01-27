@@ -79,7 +79,7 @@ CREATE TABLE bestelling(
     klantcode INT,
     medewerkerscode INT,
     afgehaald DATETIME,
-    PRIMARY KEY(artikelcode),
+    FOREIGN KEY artikelcode REFERENCES artikel(artikelcode),
     FOREIGN KEY winkelcode REFERENCES winkel(winkelcode),
     FOREIGN KEY klantcode REFERENCES klant(klantcode),
     FOREIGN KEY medewerkerscode REFERENCES medewerker(medewerkerscode)
